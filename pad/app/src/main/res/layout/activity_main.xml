@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.pad.VisionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--测试-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.60" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.15" />
+
+                <!--右边布局-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#EFEFEF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--左下-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="40dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_percent="0.25" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="#038F32"
+                                android:gravity="center"
+                                android:text="测试距离"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toTopOf="@+id/guideline8"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textDistance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{data.getShow_distance()}"
+                                android:textColor="@color/teal_700"
+                                android:textSize="30dp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--右上-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="40dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_percent="0.25" />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="#038F32"
+                                android:gravity="center"
+                                android:text="你的答案"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toTopOf="@+id/guideline7"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageHand"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:scaleX="0.8"
+                                android:scaleY="0.8"
+                                android:src="@drawable/handpic"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <!--右下-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="40dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_percent="0.25" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="#038F32"
+                                android:gravity="center"
+                                android:text="当前眼睛"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toTopOf="@+id/guideline9"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textEye"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{data.getShow_eye()}"
+                                android:textColor="@color/teal_700"
+                                android:textSize="30dp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/guideline9" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--左上-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="40dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/guideline6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintGuide_percent="0.25" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="#038F32"
+                                android:gravity="center"
+                                android:text="当前视力"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textVision"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{String.valueOf(data.getFirst())+'.'+String.valueOf(data.getSecond())}"
+                                android:textColor="@color/teal_700"
+                                android:textSize="30dp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/guideline6" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageE"
+                    android:layout_width="7.27mm"
+                    android:layout_height="7.27mm"
+                    android:src="@drawable/visionimage2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/out_progress"
+                    android:layout_width="300dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@color/teal_700"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/in_progress"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/black"
+                        app:cardCornerRadius="10dp" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--结果-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/block_end"
+            android:backgroundTint="#AA000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.45"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视力测试结束"
+                    android:textColor="@color/white"
+                    android:textSize="64dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{data.getShow_eye()+"的视力为:"+String.valueOf(data.getFirst())+"."+String.valueOf(data.getSecond())}'
+                    android:textColor="@color/white"
+                    android:textSize="52dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5秒后返回主界面"
+                    android:textColor="@color/white"
+                    android:textSize="36dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/block_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#B3DFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    app:lottie_autoPlay="true"
+                    app:lottie_repeatMode="restart"
+                    app:lottie_loop="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_fileName="connecting.json" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline20"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.8"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在准备，请稍候"
+                    android:textColor="@color/white"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline20" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
