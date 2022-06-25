@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vision" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<!--    <uses-permission android:name="android.permission.INTERNET"/>-->
+
+    <!--Light-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--Mediapipe-->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vision"
+
+        >
+        <!--android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge" -->
+        <!--
+            android:theme="@style/TranslucentTheme"-->
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@style/TranslucentTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TipsPageActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".VisionActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".DataActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".AstigmatismActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".AchromateActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".LightActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".MeasureActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".ScanActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".MainActivity" android:theme="@style/TranslucentTheme"/>
+        <activity android:name=".information.InformationActivity" android:theme="@style/TranslucentTheme"/>
+        <service android:name=".TestService"/>
+
+        <meta-data
+            android:name="cameraFacingFront"
+            android:value="true" />
+        <meta-data
+            android:name="binaryGraphName"
+            android:value="iris_tracking_gpu_ultra.binarypb" />
+        <meta-data
+            android:name="inputVideoStreamName"
+            android:value="input_video" />
+        <meta-data
+            android:name="outputVideoStreamName"
+            android:value="output_video" />
+        <meta-data
+            android:name="flipFramesVertically"
+            android:value="true" />
+    </application>
+
+    <queries>
+        <package android:name="com.example.handtiqu"/>
+    </queries>
+</manifest>
