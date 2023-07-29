@@ -10,7 +10,11 @@
 
 该仓库为`AI EYE`的代码。下图为三个APP的通信方式（不同设备之间的、不同进程之间的）
 
-![](./img/connect.png)
+<p align="center">
+    <br>
+    <img src="./img/connect.png" width="700" height="400"/>
+    <br>
+</p>
 
 其中`handtiqu`为手势识别APP，它是一个独立的程序，但是无法单独运行，它在手机端的主程序中进行调用。其主要功能是建立与`TV`的连接，并且作为手势识别的平台，将解析的结果通过`Socket`传递到`TV`端。
 
@@ -52,55 +56,147 @@
 ## 界面展示
 
 ### 主程序手机端
+<p align="center">
+    <br>
+    <img src="./img/register.jpg" width="190" height="400"/>
+    <br>
+</p>
 
-![](./img/register.jpg)
+<p align="center">
+    <br>
+    <img src="./img/login.jpg" width="190" height="400"/>
+    <br>
+</p>
 
-![](./img/login.jpg)
+<p align="center">
+    <br>
+    <img src="./img/userlist.jpg" width="190" height="400"/>
+    <br>
+</p>
 
-![](./img/userlist.jpg)
+<p align="center">
+    <br>
+    <img src="./img/main.jpg" width="190" height="400"/>
+    <br>
+</p>
 
-![](./img/main.jpg)
+<p align="center">
+    <br>
+    <img src="./img/setting.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/tips.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/vision.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/semang.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/sanguang.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/data.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/modify_pwd.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/light_detection.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/measure_init.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/measure_testing.jpg" width="190" height="400"/>
+    <br>
+</p>
+
+<p align="center">
+    <br>
+    <img src="./img/measure_disappear.jpg" width="190" height="400"/>
+    <br>
+</p>
 
 
-
-![](./img/setting.jpg)
-
-![](./img/tips.jpg)
-
-![](./img/vision.jpg)
-
-![](./img/semang.jpg)
-
-![](./img/sanguang.jpg)
-
-![](./img/data.jpg)
-
-![](./img/modify_pwd.jpg)
-
-![](./img/light_detection.jpg)
-
-![](./img/measure_init.jpg)
-
-![](./img/measure_testing.jpg)
-
-![](./img/measure_disappear.jpg)
 
 ### 手势识别端
 
-![](./img/hand_extract.jpg)
+<p align="center">
+    <br>
+    <img src="./img/hand_extract.jpg" width="190" height="400"/>
+    <br>
+</p>
 
 ### TV端
 
-![](./img/TV_main.jpg)
+<p align="center">
+    <br>
+    <img src="./img/TV_main.jpg" width="670" height="400"/>
+    <br>
+</p>
 
-![](./img/TV_eyes.jpg)
+<p align="center">
+    <br>
+    <img src="./img/TV_eyes.jpg" width="670" height="400"/>
+    <br>
+</p>
 
-![](./img/TV_distance.jpg)
+<p align="center">
+    <br>
+    <img src="./img/TV_distance.jpg" width="670" height="400"/>
+    <br>
+</p>
 
-![](./img/TV_measure.png)
+<p align="center">
+    <br>
+    <img src="./img/TV_measure.png" width="670" height="400"/>
+    <br>
+</p>
 
-![](./img/TV_waiting.jpg)
+<p align="center">
+    <br>
+    <img src="./img/TV_waiting.jpg" width="670" height="400"/>
+    <br>
+</p>
 
-![](./img/TV_testing.jpg)
+<p align="center">
+    <br>
+    <img src="./img/TV_testing.jpg" width="670" height="400"/>
+    <br>
+</p>
 
-![](./img/TV_finish.jpg)
+<p align="center">
+    <br>
+    <img src="./img/TV_finish.jpg" width="670" height="400"/>
+    <br>
+</p>
+
